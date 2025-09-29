@@ -1,0 +1,263 @@
+:root {
+  --brand-color: #950606;
+}
+
+/* Section */
+.main-bank-section {
+  padding: 50px 20px;
+  background: #f8fafc;
+}
+
+/* Flex Container */
+.bank-flex {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.bank-card {
+  flex: 1 1 340px;
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  padding: 32px 28px 36px 28px;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bank-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.bank-card h2 {
+  margin-bottom: 28px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Open Account Buttons */
+.open-account-card .account-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.account-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  transition: all 0.25s ease;
+}
+.account-btn:hover {
+  background: #7a0404;
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Loan Container */
+.loan-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Form Section */
+.loan-form-section {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loan-types {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.loan-type-btn {
+  background: #f3f7fe;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+.loan-type-btn.selected,
+.loan-type-btn:hover {
+  background: var(--brand-color);
+  color: #fff;
+}
+
+.loan-form {
+  display: flex;
+  flex-direction: column;
+}
+.loan-label {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+.amount-slider {
+  width: 100%;
+  accent-color: var(--brand-color);
+}
+.amount-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 4px;
+  cursor: pointer;
+}
+.amount-labels .amount-label:hover {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
+.loan-amount-display {
+  font-size: 15px;
+  margin-top: 4px;
+  font-weight: 600;
+  color: #334155;
+}
+.duration-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.duration-btn {
+  background: #f3f7fe;
+  color: #1e293b;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.duration-btn.selected,
+.duration-btn:hover {
+  background: var(--brand-color);
+  color: #fff;
+}
+
+/* Loan Details Box */
+.loan-details-section {
+  flex: 1 1 200px;
+  display: flex;
+  align-items: flex-start;
+}
+.loan-details-box {
+  width: 100%;
+  background: #f4efe2;
+  border-radius: 12px;
+  padding: 18px 20px;
+  color: var(--brand-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.loan-rate-label {
+  font-weight: 700;
+  font-size: 16px;
+  color: #d97706;
+}
+.loan-value-row {
+  display: flex;
+  justify-content: space-between;
+}
+.loan-value-title,
+.loan-value-value,
+.loan-meta span {
+  color: var(--brand-color);
+}
+.loan-value-title {
+  font-size: 15px;
+  font-weight: 500;
+}
+.loan-value-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+.loan-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.apply-btn {
+  background: var(--brand-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.apply-btn:hover {
+  background: #7a0404;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+  .bank-flex {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+  }
+  .loan-container {
+    flex-direction: column;
+  }
+  .loan-details-section {
+    margin-top: 20px;
+  }
+}
+
+
+/* Animated NeoBank Logo in Open Account Card */
+.open-account-card {
+  position: relative; /* make it a positioning container */
+  padding-bottom: 50px; /* space for the logo at bottom */
+}
+
+.animated-logo-container {
+  position: absolute;
+  bottom: 70px; /* distance from bottom of the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.animated-logo {
+  width: 150px; /* bigger logo */
+  animation: floatUpDown 3s ease-in-out infinite;
+  position: relative;
+}
+
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); } /* flow downward more */
+  100% { transform: translateY(0px); }
+}
+
+
